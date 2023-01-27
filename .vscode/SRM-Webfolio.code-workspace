@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../SRM-Portfolio"
+		},
+		{
+			"path": "../../Sage_Devstudio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SRM-Webfolio"
+	}
+}
