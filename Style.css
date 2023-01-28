@@ -538,7 +538,7 @@ nav .nav-menu a:hover{
 }
 @keyframes java-fill{
   100%{
-      width:80%;
+      width:75%;
   }
 }
 #boot-bar{
@@ -546,7 +546,7 @@ nav .nav-menu a:hover{
 }
 @keyframes boot-fill{
   100%{
-      width:75%;
+      width:80%;
   }
 }
 #react-bar{
@@ -560,22 +560,58 @@ nav .nav-menu a:hover{
 /*
 Back-End
 */
+#SQL-bar{
+  animation: sql-fill 2s forwards;
+}
+@keyframes sql-fill{
+  100%{
+      width:70%;
+  }
+}
 #python-bar{
   animation: python-fill 2s forwards;
 }
 @keyframes python-fill{
   100%{
-      width:40%;
+      width:70%;
   }
 }
-#java2-bar{
-  animation: java2-fill 2s forwards;
+#php-bar{
+    animation: php-fill 2s forwards;
+  }
+  @keyframes php-fill{
+    100%{
+        width:55%;
+    }
 }
-@keyframes java2-fill{
+/* Illustration/Prototype*/
+
+#illus-bar{
+  animation: illus-fill 3s forwards;
+}
+@keyframes illus-fill{
+  100%{
+      width:85%;
+  }
+}
+#cine-bar{
+  animation: cine-fill 3s forwards;
+}
+@keyframes cine-fill{
+  100%{
+      width:55%;
+  }
+}
+
+#figma-bar{
+  animation: figma-fill 3s forwards;
+}
+@keyframes figma-fill{
   100%{
       width:60%;
   }
 }
+
 .arrows{
   display: flex;
   justify-content: center;
@@ -807,7 +843,6 @@ Back-End
 .slide{
   position: relative;
   overflow: hidden;
-  width: 10%;
   border: solid 3px #3953a4!important;
   color: #3953a4 !important;
   font-size: 16px !important;
@@ -1081,6 +1116,11 @@ background-blend-mode: multiply;
   .ctoa-container{
     height: 70vh;
   }
+  .ctoa-content {
+
+    padding-top: 80px !important;
+  
+}
   .contact-container{
     height: 230px;
     width: 230px;
@@ -1097,6 +1137,10 @@ background-blend-mode: multiply;
   .footer-social a{
     margin-right: 8px;
 
+  }
+  .footer-social a svg{
+    width:20px ;
+    height:20px;
   }
 
 }

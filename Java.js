@@ -20,16 +20,16 @@ hb.addEventListener("click", () => {
 
 function closemsg(){
     const x = document.getElementById('closemsgr');
-    console.log(x.style);
+    
     x.style.display = "none";
-    console.log(x);
+ 
     
 }
 function openmsgr(){
     const x = document.getElementById('closemsgr');
-    console.log(x.style);
+  
     x.style.display = "block";
-    console.log(x);
+   
 }
 
 document.querySelectorAll(".nav-link").forEach(n => n.
@@ -80,7 +80,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.
     function skip(position) {
         if(position === "Next"){
             const skill = document.querySelector(".skill-link").querySelector(".active")
-            console.log(skill);
+           
             const a = skill.id;
             if (a === "txtfrontEnd"){
                 visible('txtbackEnd','backend');
@@ -97,7 +97,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.
         }
         else if(position === "Prev") {
             const skill = document.querySelector(".skill-link").querySelector(".active")
-            console.log(skill);
+           
             const a = skill.id;
             if (a === "txtfrontEnd"){
                 visible('txtillPro','illustration');
