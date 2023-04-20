@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const hb = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const hb = document.querySelector('.hamburger')
+const navMenu = document.querySelector('.nav-menu')
 
 
-hb.addEventListener("click", () => {
+hb.addEventListener('click', (e) => {
     hb.classList.toggle("active");
     navMenu.classList.toggle("active");
    
