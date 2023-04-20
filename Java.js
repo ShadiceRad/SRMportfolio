@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const hb = document.querySelector('.hamburger')
+var hb = document.querySelector(".hamburger");
 const navMenu = document.querySelector('.nav-menu')
 
 
-hb.addEventListener('click', (e) => {
+hb.addEventListener('click', () => {
     hb.classList.toggle("active");
     navMenu.classList.toggle("active");
    
-})
+});
 
 
 function closemsg(){
