@@ -359,7 +359,7 @@ nav .nav-menu a:hover{
   .about-container{
 
     width:100vw;
-    height:60vh;
+   
     background: rgb(29, 29, 32);
    
   }
@@ -392,8 +392,8 @@ nav .nav-menu a:hover{
   }
   .img-content img{
     padding:32px;
-    height: 60%;
-    width: 70%;
+    height: 70%;
+    width: 80%;
   }
   
 
@@ -638,100 +638,85 @@ Back-End
     .WIdo-content{
       width:100%;
       max-width: 1300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-
-      margin: 32px auto;
+      
+      margin: 0 auto;
     }
-    .wido-card{
+   
+    .wido-cont{
       display: flex;
       justify-content: space-between;
-      margin: 24px 0;
     }
-    .card-container{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      width: 300px;
-      height: 400px;
-      overflow: hidden;
+
+    .hex_container{
       position: relative;
-     
-    }
-    .card-container:hover::before{
-      content: '';
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background-image: conic-gradient(transparent,transparent,transparent, #CC78B1);
-      animation: rotate 2s linear infinite;
-    }
-    .card-container:hover::after{
-      content: '';
-      position: absolute;
-      align-content: center;
-      width: 500px;
-      height: 500px;
-      background-image: conic-gradient(transparent,transparent,transparent, #CC78B1);
-      animation: rotate 2s linear infinite;
-      animation-delay: -1s;
-    }
-    .ui-c:hover::before{
-      background-image: conic-gradient(transparent,transparent,transparent, #ffb800) !important;
-
-    }
-    .ui-c:hover::after{
-      background-image: conic-gradient(transparent,transparent,transparent, #ffb800) !important;
-
-    }
-
-    .dev-c:hover::before{
-      background-image: conic-gradient(transparent,transparent,transparent, #252399) !important;
-
-    }
-    .dev-c:hover::after{
-      background-image: conic-gradient(transparent,transparent,transparent, #252399) !important;
-
-    }
-
-    .card-container span{
-      position: absolute;
       display: flex;
-      justify-content: flex-start;
       flex-direction: column;
-      padding-top:24px ;
-      top: 5px;
-      left:5px;
-      width: calc(100% - 10px);
-      height: calc(100% - 10px);
-      z-index: 2;
-     
-      background-color: rgb(29, 29, 32);
+      justify-content: center;
+      background-color: rgb(29, 29, 32);  
+      padding-left: 20px;   
+      padding-right: 20px; 
+      width: 400px;
+      height: 400px;
+      margin-top: 100px;
+      border-bottom: solid 5px #ffb800;
     }
-    @keyframes rotate {
-      from{
-        transform: rotate(0);
-      }
-      to{
-        transform: rotate(360deg);
-      }
+    
+    .hex{
+      background-color:  #ffb800;
+      height: 60px;
+      width:100px;
+      border-color: #ffb800;
+      position: absolute;
+      display: inline-block;
+      margin-top: 50px;
+      left: 50%;
+      margin-left: -50px;
+      top: -70px
     }
-  
-  
-    .card-container i{
-      font-size: 40px;
+    .hex i{
+      font-size: 50px;
       text-align: center;
       color: #ffffff;
-      background-color: #b9529f;
-      border-radius: 40px;
-      width: 80px;
-      height: 80px;
+     
+     
       margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
 
+    }
+    
+    .hex:before{
+      content: " ";
+      width: 0;
+      height: 0;
+      
+      border-bottom: 30px solid;
+      border-color: inherit;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      position: absolute;
+      top: -30px;
+    }
+    
+    .hex:after{
+      content: " ";
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: -30px;
+      border-top: 30px solid;
+      border-color: inherit;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      
+    }
+    .hex-text{
+      display: flex;
+      margin-top: 70px;
+      flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
     }
    
     .card-container p{
@@ -1054,7 +1039,7 @@ background-blend-mode: multiply;
   }
   .text-content{
     max-width: 380px;
-    margin-left: 32px;
+    
     
   }
   .about-content{
@@ -1063,8 +1048,8 @@ background-blend-mode: multiply;
     margin: 0 auto;
   }
   .img-content{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1077,6 +1062,38 @@ background-blend-mode: multiply;
   .wido-card{
     padding: 0 32px;
   }
+  .hex_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(29, 29, 32);      
+    width: 300px;
+    height: 400px;
+    margin-top: 100px;
+    border-bottom: solid 5px #ffb800;
+  }
+  
+
+  .hex i{
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .hex-text{
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ 
   .card-container{
     height: 350px;
     width:230px
@@ -1155,6 +1172,10 @@ background-blend-mode: multiply;
   .hero-text-container h1{
     font-size: 20px !important;
   }
+  .WIdo-content{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
   
     @media (max-width:768px) {
@@ -1230,15 +1251,18 @@ background-blend-mode: multiply;
         gap: 0; 
         display: flex;
         flex-direction: column !important;
-        height: 30vh;
+        height: 50vh;
         width: 100%;
         text-align: center;
         transition: 0.3s ;
-        background: #313131;
+        background: rgba(204, 120, 177, 0.9);
     }
     .nav-item{
       font-size: 24px;
         margin: 16px 0;
+    }
+    .nav-item a{
+      font-size: 32px;
     }
     .nav-menu.active{
         left: 0 !important;
@@ -1321,13 +1345,13 @@ background-blend-mode: multiply;
     }
     .mobile-img{
      
-      background-image: url(/assets/Myava.svg);
+      background-image: url(/assets/Me.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
 
-      width:70%;
-      height: 70%;
+      width:100%;
+      height: 100%;
   
     }
     .tool-strip-container {
@@ -1424,6 +1448,14 @@ background-blend-mode: multiply;
 
      
     }
+    .wido-cont{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hex_container{
+      width:350px !important;
+    }
     .wido-card{
       position: relative;
       display: flex;
@@ -1499,7 +1531,7 @@ background-blend-mode: multiply;
       justify-content: center;
       margin-top: 10px;
       padding: 16px;
-      padding-top: 0;
+      padding-top: 100px;
       margin: 0 auto;
 
     }
@@ -1704,6 +1736,10 @@ background-blend-mode: multiply;
       z-index: 2;
      
      
+    }
+
+    .hex_container{
+      width:280px;
     }
     .mobile-img-container{
      height: 20vh;
