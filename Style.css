@@ -222,21 +222,21 @@ nav .nav-menu a:hover{
     top: -10px;
     filter: blur(60px);
     -webkit-filter: blur(60px);
-    opacity: 0.23;
+    opacity: 0.1;
     right: 65px;
   
 
   }
   .circle2{
     position: absolute;
-    width: 630px;
-    height:630px;
+    width: 530px;
+    height:530px;
     background-color: #252399;
     border-radius: 50%;
     top: 290px;
     filter: blur(60px);
     -webkit-filter: blur(60px);
-    opacity: 0.23;
+    opacity: 0.1;
     left: 65px;
   }
 
@@ -249,7 +249,7 @@ nav .nav-menu a:hover{
     top: 290px;
     filter: blur(60px);
     -webkit-filter: blur(60px);
-    opacity: 0.23;
+    opacity: 0.1;
     left: auto;
     right: auto;
   
@@ -396,6 +396,9 @@ nav .nav-menu a:hover{
     width:100vw;
    
     background: rgb(29, 29, 32);
+    border-top:solid 2px #CC78B1;
+    border-bottom:solid 2px #CC78B1;
+
    
   }
   .about-content{
@@ -408,6 +411,7 @@ nav .nav-menu a:hover{
     margin: 0 auto;
     padding-top: 50px;
    
+   
   }
   .text-content{
     width: 100%;
@@ -419,17 +423,16 @@ nav .nav-menu a:hover{
    
   }
   .img-content{
-    width: 100%;
-    
+    width: 70%;
+    padding:32px;
     max-width: 580px;
     display: flex;
     justify-content: center;
   }
   .img-content img{
-    padding:32px;
     height: 70%;
-    width: 80%;
-    border-radius: 20px;
+    width: 90%;
+
   }
   
 
@@ -458,17 +461,32 @@ nav .nav-menu a:hover{
   .skill-container{
     position: relative;
     width: 100vw;
-    
+    background-image: url(/assets/spacemanAsset\ 8@2x.png);
+    background-blend-mode: overlay;;
+    background-repeat: no-repeat;
+   
     overflow: hidden;
     background-color: rgb(29, 29, 32);
+    border-top: solid 2px #3953a4;
+    border-bottom: solid 3px #3953a4;
+
     
   }
+  .bgimg{
+    opacity: 0.6; 
+    z-index: 1000;
+ }
   .skill-wrapper{
     width:100%;
     max-width: 1300px;
     margin: 40px auto;
     padding-top: 100px;
+    z-index: 1;
+    
   }
+ 
+
+  
   .skill-content{
 
     display: flex;
@@ -549,9 +567,7 @@ nav .nav-menu a:hover{
   border-radius: 10px;
   background-color: #FFb800;
 }
-.skill-container:not(:last-child){
-  margin-bottom: 20px;
-}
+
 #html-bar{
   animation: html-fill 2s forwards;
 }
@@ -788,7 +804,7 @@ Back-End
 }
 .proj-wrapper{
   margin-top: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 .catalog-container{
   margin-top: 32px;
@@ -853,13 +869,12 @@ Back-End
   position: relative;
   width:100vw;
   height:55vh;
-
+  border-top: solid 2px #FFb800;
   background-color: rgb(29, 29, 32);
 }
 .ctoa-content{
   width:100%;
   height:100%;
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1333,9 +1348,9 @@ background-blend-mode: multiply;
     
       /*  background: linear-gradient(-45deg,#b9529f, #4fc3c6,  #3953a4);*/
       width: 100vw;
-      background-color: rgb(9, 9, 12);      
+      background-color: rgb(35, 35, 41);      
       margin: 0 auto;  
-      height: 100px;
+      height: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1343,6 +1358,9 @@ background-blend-mode: multiply;
       flex-wrap: nowrap !important;
        
     
+    }
+    .navbar a img{
+      width:40px !important;
     }
     .mobile-info{
       display: block !important;
@@ -1387,9 +1405,9 @@ background-blend-mode: multiply;
         flex-direction: column !important;
         height: 90vh;
         width: 100%;
-        text-align:start;
+        text-align:center;
         transition: 0.3s ;
-        background: rgb(110, 68, 97);
+        background: rgb(41, 41, 44);
     }
     .nav-item{
       font-size: 24px;
@@ -1549,10 +1567,23 @@ background-blend-mode: multiply;
     
        /* skill CONTAINER*/
        .skill-container{
-      display: none;
-        
+        height: 60vh;
+        background-image: none;
+       }
+       .skill-wrapper{
+      
+        padding: 0 16px;
         
       } 
+      .skill-link{
+        display: none;
+      }
+      .skill-content{
+        display: none !important;
+      }
+      .arrows{
+        display: none;
+      }
 
       /* What i do*/
     .WIdo-container{
@@ -1724,7 +1755,8 @@ background-blend-mode: multiply;
     }
     .ctoa-container{
       position: relative;
-      background-color: #ffb800;
+      background-color: rgb(29, 29, 32);
+
       width:100vw;
       height:100%;
       
@@ -1878,6 +1910,9 @@ background-blend-mode: multiply;
     .hex_container{
      width: 240px !important;
       height:300px !important;
+    }
+    .hex-text{
+      padding: 0;
     }
     .mobile-img-container{
      height: 20vh;
