@@ -827,6 +827,7 @@ Back-End
   justify-content: center;
   align-items: center;
 }
+
 .gear{
   font-size: 50px;
   color: #ffffff;
@@ -1344,6 +1345,11 @@ background-blend-mode: multiply;
     main{
       overflow-x: hidden !important;
     }
+    .spacebg{
+      background-attachment:scroll;
+      background-image: url(/assets/Spacebg-mobile.jpg);
+      
+    }
     .navbar{
     
       /*  background: linear-gradient(-45deg,#b9529f, #4fc3c6,  #3953a4);*/
@@ -1567,7 +1573,7 @@ background-blend-mode: multiply;
     
        /* skill CONTAINER*/
        .skill-container{
-        height: 60vh;
+        height: 40vh;
         background-image: none;
        }
        .skill-wrapper{
