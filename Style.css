@@ -5,9 +5,10 @@
 }
 body{
   position: relative;
-    background-color: rgb(9, 9, 12);
-   
-    
+
+  background-color: #130f40;
+
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
 }
 main{
   overflow: hidden !important;
@@ -15,13 +16,19 @@ main{
 html{
   scroll-behavior: smooth;
 }
-
-h1,h2{
+h1{
   font-family: 'Roboto Serif', serif;
   font-weight: 900;
   color: #ffffff;
   text-align: center;
-
+  font-size: 50px;
+}
+h2{
+  font-family: 'Roboto Serif', serif;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  font-size: 40px;
 }
 h3,h4,h5,h6{
   font-family: 'Oswald', sans-serif;
@@ -75,6 +82,7 @@ nav .nav-menu a:hover{
     /*  background: linear-gradient(-45deg,#b9529f, #4fc3c6,  #3953a4);*/
     width: 100%;
     max-width: 1300px;
+    top:0;
     margin: 0 auto;  
     height: 100px;
       display: flex;
@@ -82,7 +90,12 @@ nav .nav-menu a:hover{
       align-items: center;
       padding: 0 16px;  
       flex-wrap: nowrap !important;
-     
+      -webkit-transition: all 0.9s ease-out;
+      -moz-transition: all 0.9s ease-out;
+      -o-transition: all 0.9s ease-out;
+      -ms-transition: all 0.9s ease-out;
+      transition: all 0.9s ease-out;     
+      transition-delay: 0.5s;
   
   }
   .mobile-info{
@@ -366,7 +379,7 @@ nav .nav-menu a:hover{
    
   }
   .tool-strip-content{
-    background-color:  rgb(29, 29, 32);
+    background-color:  rgb(30, 30, 36);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -395,7 +408,7 @@ nav .nav-menu a:hover{
 
     width:100vw;
    
-    background: rgb(29, 29, 32);
+    background: rgb(30, 30, 36);
     border-top:solid 2px #CC78B1;
     border-bottom:solid 2px #CC78B1;
 
@@ -414,24 +427,30 @@ nav .nav-menu a:hover{
    
   }
   .text-content{
-    width: 100%;
+    width: 60%;
     max-width: 580px;
     color: rgb(255, 255, 255);
+    padding-right: 20px;
   }
   .text-content p{
     text-align: left;
    
   }
   .img-content{
-    width: 70%;
+    
+    width: 40%;
+    height:400px;
     padding:32px;
     max-width: 580px;
     display: flex;
     justify-content: center;
+ 
   }
-  .img-content img{
-    height: 70%;
-    width: 90%;
+  .img-content div img{
+    position:absolute;
+    top: -10px;
+    left: -10px;
+    height: 370px;
 
   }
   
@@ -466,7 +485,7 @@ nav .nav-menu a:hover{
     background-repeat: no-repeat;
    
     overflow: hidden;
-    background-color: rgb(29, 29, 32);
+    background-color: rgb(30, 30, 36);
     border-top: solid 2px #3953a4;
     border-bottom: solid 3px #3953a4;
 
@@ -826,6 +845,7 @@ Back-End
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.7;
 }
 
 .gear{
@@ -871,7 +891,7 @@ Back-End
   width:100vw;
   height:55vh;
   border-top: solid 2px #FFb800;
-  background-color: rgb(29, 29, 32);
+  background-color: rgb(30, 30, 36);;
 }
 .ctoa-content{
   width:100%;
@@ -972,7 +992,7 @@ background-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(29, 29, 32);
+  background-color: rgb(30, 30, 36);
  
 }
 .footer-social a{
@@ -1035,7 +1055,7 @@ background-blend-mode: multiply;
     width: 100vw;
     height: 100px;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1300px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1110,9 +1130,9 @@ background-blend-mode: multiply;
     height: 100%;
   }
   .text-content{
-    max-width: 380px;
     
-    
+    max-width: 780px;
+    padding-right: 20px;
   }
   .about-content{
     flex-direction: column;
@@ -1120,12 +1140,16 @@ background-blend-mode: multiply;
     margin: 0 auto;
   }
   .img-content{
-    width: 80%;
-    height: 70%;
+    width: 500px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 480px;
+
+  }
+  .img-content img{
+    width:100%;
+    height:100%;
   }
  
   .WIdo-content{
@@ -1234,11 +1258,9 @@ background-blend-mode: multiply;
 
 }
 @media (width: 800px){
-  .hero-container{
-    height: 100vh !important;
-  }
+ 
   .WIdo-container{
-    height:240vh !important;
+    height:1450px!important;
   }
 }
   
@@ -1334,6 +1356,9 @@ background-blend-mode: multiply;
     h1,h2,h3,h4,h5,h6,p{
       color: white;
     }
+    h2{
+      font-size: 30px;
+    }
     p{
       font-size: 16px !important;
       font-weight: 400;
@@ -1347,14 +1372,14 @@ background-blend-mode: multiply;
     }
     .spacebg{
       background-attachment:scroll;
-      background-image: url(/assets/Spacebg-mobile.jpg);
+      background-image: none;
       
     }
     .navbar{
     
       /*  background: linear-gradient(-45deg,#b9529f, #4fc3c6,  #3953a4);*/
       width: 100vw;
-      background-color: rgb(35, 35, 41);      
+      background-color: transparent;      
       margin: 0 auto;  
       height: 60px;
       display: flex;
@@ -1386,7 +1411,7 @@ background-blend-mode: multiply;
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background-color: #ffffff;
+        background-color: #FFb800;
     }
     .hamburger{
         display: block;
@@ -1493,22 +1518,25 @@ background-blend-mode: multiply;
     }
    
     .mobile-img-container{
-     
-      width:100vw;
-      height: 30vh;
+      position: relative;
+      width:130px;
+      height: 150px;
       max-width: 280px;
+      background-color: #ffb800;
       display: flex;
       justify-content:center ;
       align-items: center;
     }
     .mobile-img{
-     
+      position:absolute;
       background-image: url(/assets/Me.jpg);
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      top: -10px;
+      left: -10px;
 
-      width:100%;
+      width:130px;
       height: 100%;
   
     }
@@ -1555,7 +1583,7 @@ background-blend-mode: multiply;
       align-items: center;
       flex-direction: column;
       justify-content: space-between;
-      max-width: 430px;
+      max-width: 530px;
       margin: 0 auto;
       padding: 0 24px;
       padding-top: 50px;
@@ -1566,9 +1594,12 @@ background-blend-mode: multiply;
       display: none;
     }
     .text-content{
-      max-width: 400px;
+      max-width: 700px;
       margin-left: 0;
       
+    }
+    .abt-cont-wrap{
+      width:590px !important;
     }
     
        /* skill CONTAINER*/
@@ -1579,6 +1610,7 @@ background-blend-mode: multiply;
        .skill-wrapper{
       
         padding: 0 16px;
+        max-width: 430px;
         
       } 
       .skill-link{
@@ -1595,7 +1627,7 @@ background-blend-mode: multiply;
     .WIdo-container{
       overflow: hidden;
       width: 100vw;
-      height:190vh !important;
+      height:160vh !important;
     
     }
    .spacecontent{
@@ -1635,6 +1667,7 @@ background-blend-mode: multiply;
     }
     .hex_container{
       width:350px !important;
+      height: 290px;
     }
     .wido-card{
       position: relative;
@@ -1859,7 +1892,7 @@ background-blend-mode: multiply;
       width: 100vw;
     
      
-      background-color: #ffb800;
+      background-color: rgb(39, 37, 37);;
     }
     .footer p{
       color: #ffffff;
@@ -1872,10 +1905,25 @@ background-blend-mode: multiply;
   }
   @media (max-width:420px){
     .WIdo-container{
-      height: 250vh !important;
+      height: 1380px !important;
     }
+    .skill-container{
+      height : 50vh;
+    }
+    .text-content{
+      max-width: 300px;
+      margin-left: 0;
+      
+    }
+    .abt-cont-wrap{
+      width:590px !important;
+    }
+    
   }
   @media (max-width:320px){
+    .WIdo-container{
+      height: 280vh !important;
+    }
     p{
       font-size: 14px !important;
       
@@ -1911,17 +1959,20 @@ background-blend-mode: multiply;
       
     }
     .hex i{
-      font-size: 30px;
+      font-size: 40px;
     }
     .hex_container{
      width: 240px !important;
-      height:300px !important;
+      height:280px !important;
     }
     .hex-text{
       padding: 0;
     }
     .mobile-img-container{
-     height: 20vh;
+      position: relative;
+      background-color: #ffb800;
+
+      width:130px;
       max-width: 150px;
       margin: 0 auto;
       display: flex;
@@ -1929,14 +1980,26 @@ background-blend-mode: multiply;
     }
     
     .mobile-img{
-    
-      
+      padding: 0;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 130px;
       background-size: contain;
       background-repeat: no-repeat;
      
      
   
     }
+    
+    .text-content{
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 !important;
+    }
+   
     .ctoa-content h1{
       color: #b9529f !important;
       font-size: 28px !important;

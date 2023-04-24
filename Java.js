@@ -17,6 +17,19 @@ hb.addEventListener('click', () => {
    
 });
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".navbar").style.top = "0";
+  } else {
+    document.querySelector('.navbar').style.top = "-90px";
+    
+  }
+  prevScrollpos = currentScrollPos;
+}
+
 
 function closemsg(){
     const x = document.getElementById('closemsgr');
