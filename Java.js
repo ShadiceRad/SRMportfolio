@@ -17,18 +17,18 @@ hb.addEventListener('click', () => {
    
 });
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".navbar").style.top = "0";
-  } else {
-    document.querySelector('.navbar').style.top = "-90px";
-    
-  }
-  prevScrollpos = currentScrollPos;
-}
+var lastScrollTop;
+navbar=document.querySelector(".navbar");
+window.addEventListener('scroll', function(){
+    var scrollTop = window. pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop > lastScrollTop){
+        navbar.style.top ='-100px';
+    }
+    else {
+        navbar.style.top= '0';
+    }
+    lastScrollTop = scrollTop;
+});
 
 
 function closemsg(){
