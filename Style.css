@@ -72,7 +72,7 @@ nav .nav-menu .active a{
   color: #CC78B1 !important;
 }
 nav .nav-menu a:hover{
-  color: rgba(204, 120, 177, 0.588) !important;
+  color:#ffb800!important;
 
 }
 
@@ -1270,7 +1270,7 @@ background-blend-mode: multiply;
     width: 350px !important;
   }
   .hero-container{
-    height: 60vh;
+    height: 600px;
   }
   .hero-text-container h1{
     font-size: 20px !important;
@@ -1600,7 +1600,7 @@ background-blend-mode: multiply;
     
        /* skill CONTAINER*/
        .skill-container{
-        height: 40vh;
+        height: 280px;
         background-image: none;
        }
        .skill-wrapper{
@@ -1623,7 +1623,7 @@ background-blend-mode: multiply;
     .WIdo-container{
       overflow: hidden;
       width: 100vw;
-      height:160vh !important;
+      height:1400px !important;
     
     }
    .spacecontent{
@@ -2007,4 +2007,7 @@ background-blend-mode: multiply;
    
 
   }
- 
+ @media (orientation:landscape){
+
+
+ }

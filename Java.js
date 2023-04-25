@@ -1,3 +1,6 @@
+screen.orientation.lock("portrait");
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#input').addEventListener("keydown", function(e) {
         if (e.code=== "Enter"){
@@ -127,3 +130,4 @@ document.querySelectorAll(".nav-link").forEach(n => n.
 
         }
     }
+    
