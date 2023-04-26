@@ -1,6 +1,3 @@
-screen.orientation.lock("portrait");
-
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,6 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+$('.dropdown-menu li a').each(function() {
+    if($(location).attr('href').indexOf($(this).attr('href')) > 0) {
+         $('.dropdown-menu').show();
+    } 
+});
 
 var hb = document.querySelector(".hamburger");
 const navMenu = document.querySelector('.nav-menu')

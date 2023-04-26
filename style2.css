@@ -1,4 +1,4 @@
-@import "compass/css3";
+
 
 
 
@@ -6,6 +6,26 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+.dropdown-item{
+  display: flex !important;
+
+
+}
+.dropdown-item:hover{
+  background-color: transparent;
+}
+.dropdown-menu{
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+
+}
+.show{
+  visibility: visible !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body{
   position: relative;
@@ -23,18 +43,29 @@ main{
 html{
   scroll-behavior: smooth;
 }
+.hr1 {
+  border: 0;
+  width:700px;
+  margin: 0 auto;
+  height: 4px !important;
+  background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgb(214, 239, 255), rgba(0, 0, 0, 0));
+}
 h1{
-  font-family: 'Roboto Serif', serif;
-  font-weight: 900;
+  /*font-family: 'Archivo Black', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight:bolder;
   color: #ffffff;
   text-align: center;
   font-size: 50px;
 }
 h2{
-  font-family: 'Roboto Serif', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   color: #ffffff;
   text-align: center;
+  max-width: 730px;
+  margin: 0 auto;
   font-size: 40px;
 }
 h3,h4,h5,h6{
@@ -45,12 +76,14 @@ h3,h4,h5,h6{
 }
 p{
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
   color: #ffffff;
   text-align: center;
   max-width: 780px;
   margin: 0 auto;
+  word-spacing: 1px;
+ 
 }
 
 ul{
@@ -228,62 +261,21 @@ nav .nav-menu a:hover{
     
   }
 
-  .circle{
   
-    position: absolute;
-    width: 530px;
-    height:530px;
-    background-color: #FFb800;
-    border-radius: 50%;
-    top: -10px;
-    filter: blur(60px);
-    -webkit-filter: blur(60px);
-    opacity: 0.1;
-    right: 65px;
-  
-
-  }
-  .circle2{
-    position: absolute;
-    width: 530px;
-    height:530px;
-    background-color: #252399;
-    border-radius: 50%;
-    top: 290px;
-    filter: blur(60px);
-    -webkit-filter: blur(60px);
-    opacity: 0.1;
-    left: 65px;
-  }
-
-  .circle3{
-    position: absolute;
-    width: 330px;
-    height:330px;
-    background-color: #b9529f;
-    border-radius: 50%;
-    top: 290px;
-    filter: blur(60px);
-    -webkit-filter: blur(60px);
-    opacity: 0.1;
-    left: auto;
-    right: auto;
-  
-
-  }
   .hero-container{
     position: relative;
-  
+   
     width: 100vw;
-    height: 100vh;
+  
     overflow: hidden !important;
    
   }
   .hero-wrapper{
     margin-top:190px !important;
     width: 100%;
-
+    z-index: 1;
     padding: 0 40px;
+    padding-bottom: 140px;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -306,6 +298,11 @@ nav .nav-menu a:hover{
     text-align: center;
     color: white;
   }
+  .hero-text-container h1{
+    letter-spacing: 5px;
+    font-size: 60px;
+  }
+
 
  
 
@@ -330,7 +327,7 @@ nav .nav-menu a:hover{
     position: relative;
     padding: 1px 6px;
     font-size: 16px;
-    margin-right: 25px;
+    margin: 0 20px;
     cursor: pointer;
     background-color: whitesmoke;
     width: 50px;
@@ -373,6 +370,9 @@ nav .nav-menu a:hover{
     border-right: 25px solid transparent;
     
   }
+  .tool-strip-container{
+    margin-bottom: 70px;
+  }
   .tool-strip-container h4{
     color: rgb(255, 255, 255);
     margin-left: 0;
@@ -407,13 +407,10 @@ nav .nav-menu a:hover{
 
   /* ABOUT CONTAINER*/
   .about-container{
-
+    z-index: 1;
     width:100vw;
-   
-    background: rgb(30, 30, 36);
-    border-top:solid 2px #CC78B1;
-    border-bottom:solid 2px #CC78B1;
-
+    margin-bottom: 100px;
+  
    
   }
   .about-content{
@@ -482,14 +479,12 @@ nav .nav-menu a:hover{
   .skill-container{
     position: relative;
     width: 100vw;
-    background-image: url(/assets/spacemanAsset\ 8@2x.png);
-    background-blend-mode: overlay;;
-    background-repeat: no-repeat;
-   
+    max-width: 1024px;
+    padding: 0 32px;
+    margin: 80px auto;
     overflow: hidden;
-    background-color: rgb(30, 30, 36);
-    border-top: solid 2px #3953a4;
-    border-bottom: solid 3px #3953a4;
+
+    
 
     
   }
@@ -499,7 +494,7 @@ nav .nav-menu a:hover{
  }
   .skill-wrapper{
     width:100%;
-    max-width: 1300px;
+    max-width: 1024px;
     margin: 40px auto;
     padding-top: 100px;
     z-index: 1;
@@ -516,9 +511,11 @@ nav .nav-menu a:hover{
     justify-content: space-evenly;
     padding: 32px;
     color: #ffffff;
-    background-color:rgb(41, 41, 44);
+    background-color:rgba(41, 41, 44, 0.694);
+    border: solid 1px #ffffff3b;
+    z-index: 1;
     border-radius: 10px;
-    width:75%;
+    width:100%;
     height:500px;
     margin: 0 auto;
    
@@ -526,7 +523,7 @@ nav .nav-menu a:hover{
   
 .skill-link{
  
- 
+
   display: flex;
  justify-content: center;
 }
@@ -544,12 +541,14 @@ nav .nav-menu a:hover{
 .skill-link ul li a:hover{
   color: rgba(255, 184, 0, 0.45) !important;
 }
-.skill-link ul li  .active{
+.skill-link ul li .active{
   color: rgba(255, 184, 0, 0.9) !important;
-  background-color: rgb(41, 41, 44);
-  border-radius: 3px;
+  background-color: rgba(41, 41, 44, 0.676);
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
   text-align: center !important;
   padding: 8px;
+  z-index: 1000;
 }
 /*Skill Bar*/
 .skill-title-panel{
@@ -690,13 +689,21 @@ Back-End
   justify-content: center;
   align-items: center;
   margin: 24px 32px !important;
+  
+}
+.arrows a i{
+  font-size: 40px;
+
 }
 .lrarrow{
-  background-color: #FFb800;
   width:43px;
   padding: 10px;
   border-radius: 10px;
   margin: 8px 32px;
+ 
+}
+.lrarrow a i{
+  font-size: 40px;
 }
 
 
@@ -706,7 +713,7 @@ Back-End
     /* What i do*/
     .WIdo-container{
       width: 100vw;
-      height:90vh;
+      margin:80px 0;
   
      
     }
@@ -743,7 +750,9 @@ Back-End
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: rgb(29, 29, 32);  
+      background-color: rgba(30, 30, 36, 0.7);  
+      border: solid 1px #ffffff3b;
+      border-radius: 20px 20px 0 0;
       padding-left: 20px;   
       padding-right: 20px; 
       width: 400px;
@@ -842,12 +851,13 @@ Back-End
 .cata-item{
   width:300px;
   height: 200px;
-  background-color: #747373;
+  background-color: #7473737a;
+  border: solid 1px rgba(255, 255, 255, 0.53);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .gear{
@@ -1070,7 +1080,6 @@ background-blend-mode: multiply;
 
   
     width: 100vw;
-    height: 100vh;
     overflow: hidden;
   
    
@@ -1081,6 +1090,7 @@ background-blend-mode: multiply;
     width: 100%;
 
     padding: 0 40px;
+    padding-bottom: 140px;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1106,7 +1116,7 @@ background-blend-mode: multiply;
   }
 
   .hero-text-container h1{
-    font-size: 30px !important;
+    font-size: 50px !important;
   }
   .social-icon{
    
@@ -1117,7 +1127,7 @@ background-blend-mode: multiply;
     position: relative;
     padding: 1px 8px;
     font-size: 20px;
-    margin-right: 25px;
+    
     cursor: pointer;
     background-color: whitesmoke;
     width: 50px;
@@ -1135,6 +1145,7 @@ background-blend-mode: multiply;
     
     max-width: 780px;
     padding-right: 20px;
+    padding-left: 30px;
   }
   .about-content{
     flex-direction: column;
@@ -1279,10 +1290,10 @@ background-blend-mode: multiply;
     height: 600px;
   }
   .hero-text-container h1{
-    font-size: 20px !important;
+    font-size: 45px !important;
   }
   .WIdo-container{
-    height:125vh;
+    
   }
   .WIdo-content{
     padding-left: 10px;
@@ -1360,6 +1371,10 @@ background-blend-mode: multiply;
     }
     h2{
       font-size: 30px;
+    }
+    .hr1{
+      width: 300px;
+      height: 2px !important;
     }
     p{
       font-size: 16px !important;
@@ -1512,7 +1527,7 @@ background-blend-mode: multiply;
       color: white;
     }
     .hero-text-container h1{
-      font-size: 26px !important;
+      font-size: 35px !important;
     }
    
     .social-icon{
@@ -1522,10 +1537,10 @@ background-blend-mode: multiply;
    
     .mobile-img-container{
       position: relative;
-      width:130px;
+      width:137px;
       height: 150px;
       max-width: 280px;
-      background-color: #ffb800;
+      border: solid 3px #ffb800;
       display: flex;
       justify-content:center ;
       align-items: center;
@@ -1607,23 +1622,28 @@ background-blend-mode: multiply;
     
        /* skill CONTAINER*/
        .skill-container{
-        height: 280px;
+        width: 100vw;
         background-image: none;
+
        }
        .skill-wrapper{
-      
+        width: 100%;
         padding: 0 16px;
         max-width: 430px;
+        height: 100%;
         
       } 
       .skill-link{
         display: none;
       }
+      .skill-title-panel{
+        display: none;
+      }
       .skill-content{
-        display: none !important;
+        height:450px;
       }
       .arrows{
-        display: none;
+        
       }
 
       /* What i do*/
@@ -1910,9 +1930,7 @@ background-blend-mode: multiply;
     .WIdo-container{
       height: 1380px !important;
     }
-    .skill-container{
-      height : 50vh;
-    }
+   
     .text-content{
       max-width: 300px;
       margin-left: 0;
@@ -1947,7 +1965,7 @@ background-blend-mode: multiply;
     font-size: 24px;
   }
   .hero-text-container h1{
-    font-size: 21px !important;
+    font-size: 30px !important;
   }
 
     .tool-strip-content h3{
@@ -1973,9 +1991,9 @@ background-blend-mode: multiply;
     }
     .mobile-img-container{
       position: relative;
-      background-color: #ffb800;
+      border: solid 3px #ffb800;
 
-      width:130px;
+      width:125px;
       max-width: 150px;
       margin: 0 auto;
       display: flex;
@@ -1986,7 +2004,7 @@ background-blend-mode: multiply;
       padding: 0;
       position: absolute;
       top: -10px;
-      left: -10px;
+      left: -15px;
       width: 130px;
       background-size: contain;
       background-repeat: no-repeat;
